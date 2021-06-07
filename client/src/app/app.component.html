@@ -1,0 +1,48 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Blog Report</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="container mt-5">
+  <div class="row d-flex justify-content-end mb-2">
+    <input (input)="onInput()"/>
+  </div>
+  <div class="row " *ngFor="let item of reportData">
+      <div class="col-sm-4 font-weight-bold">
+        {{item.post}}
+      </div>
+      <div class="col-sm-4 content">
+        <span>
+          {{item?.blogUser.userName}}
+        </span>
+        <span>
+          {{item?.postDate | date: 'dd/MM/YYYY'}}
+        </span>
+      </div>
+      <div class="col-sm-4 lat-div">
+        {{item?.blogComments?.length}} comments
+      </div>
+    <ng-container *ngFor="let p of item?.blogComments">
+      <div class="col-sm-4 text-center">
+        {{p?.comment}}
+      </div>
+      <div class="col-sm-4 text-center content">
+        <span>
+          {{p?.blogUser?.userName}}
+        </span>
+        <span>
+          {{p?.commentDate | date: 'dd/MM/YYYY'}}
+        </span>
+      </div>
+      <div class="col-sm-4 lat-div">
+          Like({{getLike(p?.blogCommentLikeAndDislikes)}})
+          Dislike({{getDislike(p?.blogCommentLikeAndDislikes)}})
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div class="container">
+  <mat-paginator (page)="getTableData($event, 3)" #paginator [length]="totalRowCount"
+              [pageSize]="3">
+</mat-paginator>
+</div>

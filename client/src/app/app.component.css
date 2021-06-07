@@ -1,0 +1,14 @@
+.row div{
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+.row:last-child{
+  border-bottom: 1px solid black;
+}
+.row .lat-div{
+  border-right: 1px solid black;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
