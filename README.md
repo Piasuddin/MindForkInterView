@@ -15,4 +15,4 @@ First Download this app both client and Server...
 4. Angular
 
 ## Screenshots
-
+https://github.com/Piasuddin/MindForkInterView/blob/master/Screenshot%20(45).png
