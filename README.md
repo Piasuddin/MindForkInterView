@@ -3,6 +3,7 @@ This is a blogging Report
 
 ## How to Run This App
 First Download this app both client and Server
+Change the server connection string in appsetting.json file
 As i use code first approch so you need to run following commant in package manager consol
 1) Add-Migration
 2) Update-Database
