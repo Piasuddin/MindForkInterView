@@ -1,5 +1,5 @@
 # About
-This is a blogging Report
+This is a blogging Report viewer application 
 
 ## How to Run This App
 First Download this app both client and Server
