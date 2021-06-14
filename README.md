@@ -2,9 +2,9 @@
 This is a blogging Report viewer application 
 
 ## How to Run This App
-First Download this app both client and Server
+First Download this app both client and Server. Open server solution with visual studio.
 Change the server connection string in appsetting.json file
-As i use code first approch so you need to run following commant in package manager consol
+As i use code first approch so you need to run following command in package manager console
 1) Add-Migration
 2) Update-Database
 
